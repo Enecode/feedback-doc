@@ -1,0 +1,30 @@
+.feedback {
+    margin-top: 20px;
+}
+  
+.feedback button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+  
+.comment-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+  
+.comment-box button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}  
