@@ -6,6 +6,12 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
+const webpack = require('webpack');
+const dotenv = require('dotenv');
+
+dotenv.config();
+
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'My Site',
@@ -139,6 +145,17 @@ const config = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
+
+      configureWebpack: (config, isServer, utils) => {
+        return {
+          plugins: [
+            new webpack.DefinePlugin({
+              'process.env': JSON.stringify(process.env),
+            }),
+          ],
+        };
+      },
+
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
